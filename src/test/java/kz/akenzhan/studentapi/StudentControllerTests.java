@@ -98,6 +98,6 @@ class StudentControllerTests {
     void showsStudentNameOnRootPage() throws Exception {
         mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.student").value("Assanali Akenzhan"));
+                .andExpect(jsonPath("$.student").value("Akenzhan Assanali"));
     }
 }
