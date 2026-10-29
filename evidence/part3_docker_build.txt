@@ -1,0 +1,186 @@
+++ docker build -t akenzhan-assanali-student-api:v1.0-akenzhan-assanali .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 763B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#2 ...
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:17-jdk
+#3 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#2 DONE 2.9s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 86B 0.0s done
+#4 DONE 0.1s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [build 1/7] FROM docker.io/library/eclipse-temurin:17-jdk@sha256:91011320978c10ec51d2cde1eb6f616db6d2a739a0e521096c343dd3fed9abe6
+#6 resolve docker.io/library/eclipse-temurin:17-jdk@sha256:91011320978c10ec51d2cde1eb6f616db6d2a739a0e521096c343dd3fed9abe6
+#6 resolve docker.io/library/eclipse-temurin:17-jdk@sha256:91011320978c10ec51d2cde1eb6f616db6d2a739a0e521096c343dd3fed9abe6 0.1s done
+#6 ...
+
+#7 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#7 resolve docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee 0.1s done
+#7 DONE 0.5s
+
+#6 [build 1/7] FROM docker.io/library/eclipse-temurin:17-jdk@sha256:91011320978c10ec51d2cde1eb6f616db6d2a739a0e521096c343dd3fed9abe6
+#6 DONE 0.6s
+
+#7 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#7 ...
+
+#5 [internal] load build context
+#5 transferring context: 71.81kB 0.5s done
+#5 DONE 0.6s
+
+#8 [build 2/7] WORKDIR /workspace
+#8 DONE 0.1s
+
+#7 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#7 sha256:871684199c33b60f7e90eaaabe0b28a6a37df73ae51fe3e450cd6c2b9f9c6747 0B / 2.46kB 0.2s
+#7 sha256:4bb9a6f797c90c19b207f662dd0f04d610ee6996cb4e99983312c1a86cd18403 0B / 156B 0.2s
+#7 ...
+
+#9 [build 3/7] COPY gradlew settings.gradle build.gradle ./
+#9 DONE 0.1s
+
+#7 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 0B / 47.52MB 0.2s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 0B / 20.14MB 0.2s
+#7 ...
+
+#10 [build 4/7] COPY gradle ./gradle
+#10 DONE 0.1s
+
+#7 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#7 sha256:871684199c33b60f7e90eaaabe0b28a6a37df73ae51fe3e450cd6c2b9f9c6747 2.46kB / 2.46kB 0.3s done
+#7 sha256:4bb9a6f797c90c19b207f662dd0f04d610ee6996cb4e99983312c1a86cd18403 156B / 156B 0.5s done
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 3.15MB / 47.52MB 1.5s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 1.05MB / 20.14MB 1.7s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 6.29MB / 47.52MB 2.0s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 9.44MB / 47.52MB 2.3s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 2.10MB / 20.14MB 2.1s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 3.15MB / 20.14MB 2.3s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 4.19MB / 20.14MB 2.4s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 12.58MB / 47.52MB 2.9s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 5.24MB / 20.14MB 2.7s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 6.29MB / 20.14MB 2.9s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 7.34MB / 20.14MB 3.0s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 15.73MB / 47.52MB 3.3s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 8.39MB / 20.14MB 3.2s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 9.44MB / 20.14MB 3.5s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 18.86MB / 47.52MB 3.8s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 10.49MB / 20.14MB 3.6s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 11.53MB / 20.14MB 3.7s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 12.58MB / 20.14MB 3.9s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 13.63MB / 20.14MB 4.2s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 22.02MB / 47.52MB 4.5s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 14.68MB / 20.14MB 4.4s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 15.73MB / 20.14MB 4.5s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 16.78MB / 20.14MB 4.7s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 25.17MB / 47.52MB 5.0s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 17.83MB / 20.14MB 4.8s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 18.87MB / 20.14MB 5.0s
+#7 sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 20.14MB / 20.14MB 5.1s done
+#7 extracting sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 29.36MB / 47.52MB 5.4s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 33.55MB / 47.52MB 5.7s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 36.70MB / 47.52MB 6.0s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 39.85MB / 47.52MB 6.1s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 45.09MB / 47.52MB 6.4s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 47.52MB / 47.52MB 6.6s
+#7 sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 47.52MB / 47.52MB 6.7s done
+#7 extracting sha256:55276dea08ee0fcfc88e30a530566765c5d6cc5bcb9b628b018695288903b8a1 1.8s done
+#7 DONE 7.5s
+
+#11 [build 5/7] RUN chmod +x gradlew && ./gradlew dependencies --no-daemon > /dev/null
+#11 ...
+
+#7 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#7 extracting sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9
+#7 extracting sha256:8a5d3dd27cd5bc2c69c78656a4679822f4b6d7962b05dd941df3766cb0336eb9 1.0s done
+#7 DONE 8.6s
+
+#11 [build 5/7] RUN chmod +x gradlew && ./gradlew dependencies --no-daemon > /dev/null
+#11 ...
+
+#7 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#7 extracting sha256:4bb9a6f797c90c19b207f662dd0f04d610ee6996cb4e99983312c1a86cd18403 0.0s done
+#7 extracting sha256:871684199c33b60f7e90eaaabe0b28a6a37df73ae51fe3e450cd6c2b9f9c6747 0.0s done
+#7 DONE 8.6s
+
+#12 [stage-1 2/3] WORKDIR /app
+#12 DONE 0.4s
+
+#11 [build 5/7] RUN chmod +x gradlew && ./gradlew dependencies --no-daemon > /dev/null
+#11 DONE 96.4s
+
+#13 [build 6/7] COPY src ./src
+#13 DONE 0.3s
+
+#14 [build 7/7] RUN ./gradlew bootJar -x test --no-daemon
+#14 3.769 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+#14 8.264 Daemon will be stopped at the end of the build 
+#14 46.06 > Task :compileJava
+#14 46.16 > Task :processResources
+#14 46.16 > Task :classes
+#14 46.16 > Task :resolveMainClassName
+#14 49.16 > Task :bootJar
+#14 49.25 
+#14 49.25 BUILD SUCCESSFUL in 48s
+#14 49.25 4 actionable tasks: 4 executed
+#14 49.25 Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
+#14 DONE 49.6s
+
+#15 [stage-1 3/3] COPY --from=build /workspace/build/libs/student-api.jar app.jar
+#15 DONE 0.2s
+
+#16 exporting to image
+#16 exporting layers
+#16 exporting layers 2.5s done
+#16 exporting manifest sha256:e6362c3a8a3b02955ee951d5f2dbc5bee9aafb6b6d0a78d20832641c302ea0cb 0.0s done
+#16 exporting config sha256:d11c318357496e27a0dca1d27601383c616f1c30e81980d3a47e1fb5f4579ea2 0.0s done
+#16 exporting attestation manifest sha256:218c19bba8d2c84ba599152a053a34a645add7fe3c76ab9b6405454c51e20e51 0.0s done
+#16 exporting manifest list sha256:5ceded5aa24e2ddb7f8aac3b59997466c37945c2be88d114307a3b175e92fa3f
+#16 exporting manifest list sha256:5ceded5aa24e2ddb7f8aac3b59997466c37945c2be88d114307a3b175e92fa3f 0.0s done
+#16 naming to docker.io/library/akenzhan-assanali-student-api:v1.0-akenzhan-assanali done
+#16 unpacking to docker.io/library/akenzhan-assanali-student-api:v1.0-akenzhan-assanali
+#16 unpacking to docker.io/library/akenzhan-assanali-student-api:v1.0-akenzhan-assanali 0.3s done
+#16 DONE 3.0s
+++ docker images akenzhan-assanali-student-api
+REPOSITORY                      TAG                      IMAGE ID       CREATED         SIZE
+akenzhan-assanali-student-api   v1.0-akenzhan-assanali   5ceded5aa24e   4 seconds ago   532MB
+++ docker image inspect akenzhan-assanali-student-api:v1.0-akenzhan-assanali --format 'Tags={{.RepoTags}} Created={{.Created}} Size={{.Size}} bytes Arch={{.Architecture}} Os={{.Os}} ExposedPorts={{.Config.ExposedPorts}}'
+Tags=[akenzhan-assanali-student-api:v1.0-akenzhan-assanali] Created=2026-10-29T10:00:23.132462519Z Size=159253882 bytes Arch=amd64 Os=linux ExposedPorts=map[8080/tcp:{}]
+++ docker history akenzhan-assanali-student-api:v1.0-akenzhan-assanali
+IMAGE          CREATED         CREATED BY                                      SIZE      COMMENT
+5ceded5aa24e   5 seconds ago   ENTRYPOINT ["java" "-jar" "/app/app.jar"]       0B        buildkit.dockerfile.v0
+<missing>      5 seconds ago   EXPOSE [8080/tcp]                               0B        buildkit.dockerfile.v0
+<missing>      5 seconds ago   COPY /workspace/build/libs/student-api.jar a…   55.1MB    buildkit.dockerfile.v0
+<missing>      2 minutes ago   WORKDIR /app                                    8.19kB    buildkit.dockerfile.v0
+<missing>      2 minutes ago   ENV APP_VERSION=v1.0-akenzhan-assanali          0B        buildkit.dockerfile.v0
+<missing>      2 minutes ago   ARG APP_VERSION=v1.0-akenzhan-assanali          0B        buildkit.dockerfile.v0
+<missing>      2 minutes ago   LABEL maintainer=Akenzhan Assanali org.openc…   0B        buildkit.dockerfile.v0
+<missing>      2 days ago      ENTRYPOINT ["/__cacert_entrypoint.sh"]          0B        buildkit.dockerfile.v0
+<missing>      2 days ago      COPY --chmod=755 entrypoint.sh /__cacert_ent…   12.3kB    buildkit.dockerfile.v0
+<missing>      2 days ago      RUN /bin/sh -c set -eux;     echo "Verifying…   12.3kB    buildkit.dockerfile.v0
+<missing>      2 days ago      RUN /bin/sh -c set -eux;     ARCH="$(dpkg --…   142MB     buildkit.dockerfile.v0
+<missing>      2 days ago      ENV JAVA_VERSION=jdk-17.0.20.1+1                0B        buildkit.dockerfile.v0
+<missing>      2 days ago      RUN /bin/sh -c set -eux;     apt-get update;…   58.2MB    buildkit.dockerfile.v0
+<missing>      2 days ago      ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_AL…   0B        buildkit.dockerfile.v0
+<missing>      2 days ago      ENV PATH=/opt/java/openjdk/bin:/usr/local/sb…   0B        buildkit.dockerfile.v0
+<missing>      2 days ago      ENV JAVA_HOME=/opt/java/openjdk                 0B        buildkit.dockerfile.v0
+<missing>      4 days ago      umoci raw add-layer --image /home/buildd/roc…   12.3kB    Add rock control metadata
+<missing>      4 days ago      umoci config --image /home/buildd/rockcraft-…   0B        Set annotations
+<missing>      4 days ago      umoci config --image /home/buildd/rockcraft-…   0B        Set labels
+<missing>      4 days ago      umoci config --image /home/buildd/rockcraft-…   0B        Set default PATH for bare-based rock
+<missing>      4 days ago      umoci config --image /home/buildd/rockcraft-…   0B        Set default commands
+<missing>      4 days ago      umoci config --image /home/buildd/rockcraft-…   0B        Set entrypoint
+<missing>      4 days ago      umoci raw add-layer --image /home/buildd/roc…   117MB     

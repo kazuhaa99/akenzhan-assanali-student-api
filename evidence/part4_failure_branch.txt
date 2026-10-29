@@ -1,0 +1,35 @@
+++ git checkout -b test/akenzhan-assanali-pipeline-failure
+Switched to a new branch 'test/akenzhan-assanali-pipeline-failure'
+++ sed -i 's/\.andExpect(jsonPath("\$\.student")\.value("Akenzhan Assanali"));/.andExpect(jsonPath("$.student").value("Assanali Akenzhan"));/' src/test/java/kz/akenzhan/studentapi/StudentControllerTests.java
+++ git diff
+diff --git a/jenkins/casc.yaml b/jenkins/casc.yaml
+index 1483065..2132c57 100644
+--- a/jenkins/casc.yaml
++++ b/jenkins/casc.yaml
+@@ -47,7 +47,7 @@ jobs:
+             scm {
+               git {
+                 remote { url('https://github.com/kazuhaa99/akenzhan-assanali-student-api.git') }
+-                branch('*/${BRANCH}')
++                branch('*/^${BRANCH}')
+               }
+             }
+             scriptPath('Jenkinsfile')
+diff --git a/src/test/java/kz/akenzhan/studentapi/StudentControllerTests.java b/src/test/java/kz/akenzhan/studentapi/StudentControllerTests.java
+index c85c3b2..40554a2 100644
+--- a/src/test/java/kz/akenzhan/studentapi/StudentControllerTests.java
++++ b/src/test/java/kz/akenzhan/studentapi/StudentControllerTests.java
+@@ -98,6 +98,6 @@ class StudentControllerTests {
+     void showsStudentNameOnRootPage() throws Exception {
+         mockMvc.perform(get("/"))
+                 .andExpect(status().isOk())
+-                .andExpect(jsonPath("$.student").value("Akenzhan Assanali"));
++                .andExpect(jsonPath("$.student").value("Assanali Akenzhan"));
+     }
+ }
+++ git commit -q -am 'Controlled error: expect wrong student name in test (Akenzhan Assanali)'
+++ git push -q -u origin test/akenzhan-assanali-pipeline-failure
+remote: 
+remote: Create a pull request for 'test/akenzhan-assanali-pipeline-failure' on GitHub by visiting:        
+remote:      https://github.com/kazuhaa99/akenzhan-assanali-student-api/pull/new/test/akenzhan-assanali-pipeline-failure        
+remote: 

@@ -1,0 +1,211 @@
++ cd /home/akenzhan/akenzhan-assanali-student-api
++ mkdir -p scripts logs backups src
++ touch Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md
++ touch scripts/Akenzhan_Assanali_system_report.sh
++ touch logs/Akenzhan_Assanali_system_report.log
++ tree -L 2 --dirsfirst -I 'build|gradle|evidence|main|test'
+.
+├── backups
+├── logs
+│   └── Akenzhan_Assanali_system_report.log
+├── scripts
+│   └── Akenzhan_Assanali_system_report.sh
+├── src
+├── Dockerfile
+├── Jenkinsfile
+├── README.md
+├── build.gradle
+└── docker-compose.yml
+
+5 directories, 7 files
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e scripts ']'
++ echo 'OK      scripts'
+OK      scripts
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e logs ']'
++ echo 'OK      logs'
+OK      logs
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e backups ']'
++ echo 'OK      backups'
+OK      backups
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e src ']'
++ echo 'OK      src'
+OK      src
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e Dockerfile ']'
++ echo 'OK      Dockerfile'
+OK      Dockerfile
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e docker-compose.yml ']'
++ echo 'OK      docker-compose.yml'
+OK      docker-compose.yml
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e Jenkinsfile ']'
++ echo 'OK      Jenkinsfile'
+OK      Jenkinsfile
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e build.gradle ']'
++ echo 'OK      build.gradle'
+OK      build.gradle
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e README.md ']'
++ echo 'OK      README.md'
+OK      README.md
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e scripts/Akenzhan_Assanali_system_report.sh ']'
++ echo 'OK      scripts/Akenzhan_Assanali_system_report.sh'
+OK      scripts/Akenzhan_Assanali_system_report.sh
++ for f in scripts logs backups src Dockerfile docker-compose.yml Jenkinsfile build.gradle README.md scripts/Akenzhan_Assanali_system_report.sh logs/Akenzhan_Assanali_system_report.log
++ '[' -e logs/Akenzhan_Assanali_system_report.log ']'
++ echo 'OK      logs/Akenzhan_Assanali_system_report.log'
+OK      logs/Akenzhan_Assanali_system_report.log
++ cat scripts/Akenzhan_Assanali_system_report.sh
+#!/bin/bash
+# System report for Akenzhan Assanali.
+# Usage: ./Akenzhan_Assanali_system_report.sh [log_file]
+
+STUDENT_NAME="Akenzhan Assanali"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+LOG_FILE="${1:-$SCRIPT_DIR/../logs/Akenzhan_Assanali_system_report.log}"
+
+{
+    echo "=================================================="
+    echo " System report — $STUDENT_NAME"
+    echo "=================================================="
+    echo "Student:        $STUDENT_NAME"
+    echo "Date and time:  $(date '+%Y-%m-%d %H:%M:%S %Z')"
+    echo "Username:       $(whoami)"
+    echo
+    echo "--- Operating system and kernel ---"
+    grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '"'
+    echo "Kernel: $(uname -r) ($(uname -m))"
+    echo
+    echo "--- CPU ---"
+    lscpu | grep -E 'Model name|^CPU\(s\)|Architecture'
+    echo
+    echo "--- Memory ---"
+    free -h
+    echo
+    echo "--- Disk usage ---"
+    df -h
+    echo
+    echo "--- Available disk space on / ---"
+    df -h --output=avail / | tail -1
+    echo
+} | tee -a "$LOG_FILE"
++ bash scripts/Akenzhan_Assanali_system_report.sh
+==================================================
+ System report — Akenzhan Assanali
+==================================================
+Student:        Akenzhan Assanali
+Date and time:  2026-10-29 09:55:08 UTC
+Username:       akenzhan
+
+--- Operating system and kernel ---
+Ubuntu 26.04.1 LTS
+Kernel: 6.6.87.2-microsoft-standard-WSL2 (x86_64)
+
+--- CPU ---
+Architecture:                         x86_64
+CPU(s):                               16
+Model name:                           AMD Ryzen 7 4800H with Radeon Graphics
+
+--- Memory ---
+               total        used        free      shared  buff/cache   available
+Mem:           7.5Gi       1.1Gi       4.3Gi       3.8Mi       2.3Gi       6.4Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+--- Disk usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+overlay        1007G  7.0G  949G   1% /
+tmpfs            64M     0   64M   0% /dev
+shm              64M     0   64M   0% /dev/shm
+C:\             476G  460G   17G  97% /project
+/dev/sde       1007G  7.0G  949G   1% /etc/hosts
+tmpfs           3.8G     0  3.8G   0% /proc/acpi
+tmpfs           3.8G     0  3.8G   0% /proc/scsi
+tmpfs           3.8G     0  3.8G   0% /sys/firmware
+
+--- Available disk space on / ---
+ 949G
+
++ ls -l scripts/Akenzhan_Assanali_system_report.sh
+-rwxr--r-- 1 akenzhan akenzhan 1038 Oct 29 09:55 scripts/Akenzhan_Assanali_system_report.sh
++ chmod +x scripts/Akenzhan_Assanali_system_report.sh
++ chmod 744 scripts/Akenzhan_Assanali_system_report.sh
++ ls -l scripts/Akenzhan_Assanali_system_report.sh
+-rwxr--r-- 1 akenzhan akenzhan 1038 Oct 29 09:55 scripts/Akenzhan_Assanali_system_report.sh
++ stat -c '%A %a %U %n' scripts/Akenzhan_Assanali_system_report.sh
+-rwxr--r-- 744 akenzhan scripts/Akenzhan_Assanali_system_report.sh
++ ./scripts/Akenzhan_Assanali_system_report.sh
++ cp README.md backups/README_Akenzhan_Assanali_backup.md
++ ls -l backups/
+total 4
+-rwxr-xr-x 1 akenzhan akenzhan 724 Oct 29 09:55 README_Akenzhan_Assanali_backup.md
++ diff README.md backups/README_Akenzhan_Assanali_backup.md
++ echo 'Backup has the same contents as README.md'
+Backup has the same contents as README.md
++ cat backups/README_Akenzhan_Assanali_backup.md
+# Akenzhan Assanali — Student API
+
+Spring Boot CRUD application for managing students (DevOps midterm).
+
+- **Student:** Akenzhan Assanali
+- **Stack:** Java 17, Spring Boot, Gradle, PostgreSQL, Docker, Jenkins
+- **Image:** `akenzhan-assanali-student-api:v1.0-akenzhan-assanali`
+
+## API
+
+| Method | URL | Description |
+|---|---|---|
+| GET | `/` | Application info (student name, version) |
+| GET | `/api/students` | List all students |
+| GET | `/api/students/{id}` | Get one student |
+| POST | `/api/students` | Create a student |
+| DELETE | `/api/students/{id}` | Delete a student |
+
+## Run
+
+```bash
+cp .env.example .env      # set your own password
+docker compose up -d --build
+curl http://localhost:8080/api/students
+```
++ java /tmp/AkenzhanWorker.java
++ sleep 4
+Java worker of Akenzhan Assanali started
++ ps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.3  0.0   7528  3712 ?        Ss   09:54   0:00 bash /project/evidence/run_part1.sh
+root        79  0.0  0.0   9848  4352 ?        S    09:55   0:00 su - akenzhan -c PATH=/opt/java/openjdk/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin bash /project/evidence/part1_commands.sh
+akenzhan    81  0.4  0.0   7936  3712 ?        Ss   09:55   0:00 bash /project/evidence/part1_commands.sh
+akenzhan   135 36.1  1.0 5157272 82676 ?       Sl   09:55   0:01 java /tmp/AkenzhanWorker.java
+akenzhan   160  0.0  0.0  10148  4096 ?        R    09:55   0:00 ps aux
++ ps aux
++ grep -i '[j]ava'
+root        79  0.0  0.0   9848  4352 ?        S    09:55   0:00 su - akenzhan -c PATH=/opt/java/openjdk/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin bash /project/evidence/part1_commands.sh
+akenzhan   135 36.1  1.0 5157272 82676 ?       Sl   09:55   0:01 java /tmp/AkenzhanWorker.java
++ pgrep -a java
+135 java /tmp/AkenzhanWorker.java
++ tail -n 5 logs/Akenzhan_Assanali_system_report.log
+tmpfs           3.8G     0  3.8G   0% /sys/firmware
+
+--- Available disk space on / ---
+ 949G
+
++ grep -n Akenzhan logs/Akenzhan_Assanali_system_report.log
+2: System report — Akenzhan Assanali
+4:Student:        Akenzhan Assanali
+37: System report — Akenzhan Assanali
+39:Student:        Akenzhan Assanali
++ grep -n Akenzhan logs/Akenzhan_Assanali_system_report.log
++ cat logs/Akenzhan_Assanali_log_analysis.txt
+2: System report — Akenzhan Assanali
+4:Student:        Akenzhan Assanali
+37: System report — Akenzhan Assanali
+39:Student:        Akenzhan Assanali
+++ pgrep -f AkenzhanWorker
++ kill 135

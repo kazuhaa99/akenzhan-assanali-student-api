@@ -1,0 +1,55 @@
+++ pwd
+/c/Users/spoke/Desktop/akenzhan-assanali-student-api
+++ git init -b main
+Initialized empty Git repository in C:/Users/spoke/Desktop/akenzhan-assanali-student-api/.git/
+++ git config user.name 'Akenzhan Assanali'
+++ git config user.email spokeesofficial@gmail.com
+++ git config core.autocrlf false
+++ git config --get user.name
+Akenzhan Assanali
+++ git config --get user.email
+spokeesofficial@gmail.com
+++ tail -4 .gitignore
+### Secrets ###
+.env
+*.env
+!.env.example
+++ git add .gitattributes .gitignore .dockerignore .env.example Dockerfile docker-compose.yml Jenkinsfile README.md build.gradle settings.gradle gradlew gradlew.bat gradle src scripts logs backups
+++ git update-index --chmod=+x scripts/Akenzhan_Assanali_system_report.sh gradlew
+++ git status --short
+A  .dockerignore
+A  .env.example
+A  .gitattributes
+A  .gitignore
+A  Dockerfile
+A  Jenkinsfile
+A  README.md
+A  backups/README_Akenzhan_Assanali_backup.md
+A  build.gradle
+A  docker-compose.yml
+A  gradle/wrapper/gradle-wrapper.jar
+A  gradle/wrapper/gradle-wrapper.properties
+A  gradlew
+A  gradlew.bat
+A  logs/Akenzhan_Assanali_log_analysis.txt
+A  logs/Akenzhan_Assanali_system_report.log
+A  scripts/Akenzhan_Assanali_system_report.sh
+A  settings.gradle
+A  src/main/java/kz/akenzhan/studentapi/InfoController.java
+A  src/main/java/kz/akenzhan/studentapi/StudentApiApplication.java
+A  src/main/java/kz/akenzhan/studentapi/student/ApiExceptionHandler.java
+A  src/main/java/kz/akenzhan/studentapi/student/Student.java
+A  src/main/java/kz/akenzhan/studentapi/student/StudentController.java
+A  src/main/java/kz/akenzhan/studentapi/student/StudentNotFoundException.java
+A  src/main/java/kz/akenzhan/studentapi/student/StudentRepository.java
+A  src/main/resources/application.properties
+A  src/test/java/kz/akenzhan/studentapi/StudentApiApplicationTests.java
+A  src/test/java/kz/akenzhan/studentapi/StudentControllerTests.java
+A  src/test/resources/application.properties
+?? evidence/
+++ git commit -q -m 'Initial commit: Akenzhan Assanali Student API'
+++ git log --oneline
+5c875f2 Initial commit: Akenzhan Assanali Student API
+++ git check-ignore -v .env
+.gitignore:40:*.env	.env
++ pwd -P

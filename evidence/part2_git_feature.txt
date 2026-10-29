@@ -1,0 +1,33 @@
+++ git checkout -b feature/akenzhan-assanali-crud
+Switched to a new branch 'feature/akenzhan-assanali-crud'
+++ git branch
+* feature/akenzhan-assanali-crud
+  main
+++ git add src
+++ git commit -q -m 'Add update (PUT) endpoint for students by Akenzhan Assanali'
+++ python -
+++ git diff --stat
+ README.md | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+++ git add README.md
+++ git commit -q -m 'Document update endpoint in README (Akenzhan Assanali)'
+++ git log --oneline
+c136f5b Document update endpoint in README (Akenzhan Assanali)
+073b205 Add update (PUT) endpoint for students by Akenzhan Assanali
+5c875f2 Initial commit: Akenzhan Assanali Student API
+++ git checkout main
+Switched to branch 'main'
+++ git merge --no-ff feature/akenzhan-assanali-crud -m 'Merge branch '\''feature/akenzhan-assanali-crud'\'' into main'
+Merge made by the 'ort' strategy.
+ README.md                                          |  8 +++++++
+ .../studentapi/student/StudentController.java      | 11 +++++++++
+ .../studentapi/StudentControllerTests.java         | 26 ++++++++++++++++++++++
+ 3 files changed, 45 insertions(+)
+++ git log --oneline --graph --all
+*   1c6469d Merge branch 'feature/akenzhan-assanali-crud' into main
+|\  
+| * c136f5b Document update endpoint in README (Akenzhan Assanali)
+| * 073b205 Add update (PUT) endpoint for students by Akenzhan Assanali
+|/  
+* 5c875f2 Initial commit: Akenzhan Assanali Student API
++ pwd -P

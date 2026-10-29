@@ -1,0 +1,200 @@
+Started by user Akenzhan Assanali
+Checking out git https://github.com/kazuhaa99/akenzhan-assanali-student-api.git into /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API@script/fe3ff35cb3a9f3e56a99ccd3c55a7179b9dc681c45d11d7121fc6debe7ccb48c to read Jenkinsfile
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API@script/fe3ff35cb3a9f3e56a99ccd3c55a7179b9dc681c45d11d7121fc6debe7ccb48c/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kazuhaa99/akenzhan-assanali-student-api.git # timeout=10
+Fetching upstream changes from https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/kazuhaa99/akenzhan-assanali-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/test/akenzhan-assanali-pipeline-failure^{commit} # timeout=10
+Checking out Revision b5ae133a44dbf6bd6a8917f4f2d34315a671b20c (refs/remotes/origin/test/akenzhan-assanali-pipeline-failure)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b5ae133a44dbf6bd6a8917f4f2d34315a671b20c # timeout=10
+Commit message: "Controlled error: expect wrong student name in test (Akenzhan Assanali)"
+First time build. Skipping changelog.
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kazuhaa99/akenzhan-assanali-student-api.git # timeout=10
+Fetching upstream changes from https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/kazuhaa99/akenzhan-assanali-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/test/akenzhan-assanali-pipeline-failure^{commit} # timeout=10
+Checking out Revision b5ae133a44dbf6bd6a8917f4f2d34315a671b20c (refs/remotes/origin/test/akenzhan-assanali-pipeline-failure)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b5ae133a44dbf6bd6a8917f4f2d34315a671b20c # timeout=10
+Commit message: "Controlled error: expect wrong student name in test (Akenzhan Assanali)"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+Student: Akenzhan Assanali
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kazuhaa99/akenzhan-assanali-student-api.git # timeout=10
+Fetching upstream changes from https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/kazuhaa99/akenzhan-assanali-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/test/akenzhan-assanali-pipeline-failure^{commit} # timeout=10
+Checking out Revision b5ae133a44dbf6bd6a8917f4f2d34315a671b20c (refs/remotes/origin/test/akenzhan-assanali-pipeline-failure)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f b5ae133a44dbf6bd6a8917f4f2d34315a671b20c # timeout=10
+Commit message: "Controlled error: expect wrong student name in test (Akenzhan Assanali)"
+[Pipeline] sh
++ git log --oneline -5
+b5ae133 Controlled error: expect wrong student name in test (Akenzhan Assanali)
+cc666db Add local Jenkins setup and JDK tool to Jenkinsfile (Akenzhan Assanali)
+1f4ff98 Add curl API test script and project explanations (Akenzhan Assanali)
+8cf36d9 Resolve README merge conflict between main and documentation branch (Akenzhan Assanali)
+c3dcd9c Update README description on main (Akenzhan Assanali)
+[Pipeline] sh
++ java -version
+openjdk version "17.0.18" 2026-01-20
+OpenJDK Runtime Environment Temurin-17.0.18+8 (build 17.0.18+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.18+8 (build 17.0.18+8, mixed mode)
++ docker version --format Docker client {{.Client.Version}}, server {{.Server.Version}}
+Docker client 29.9.2, server 28.5.1
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ chmod +x gradlew
+[Pipeline] sh
++ ./gradlew clean bootJar -x test --no-daemon
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :resolveMainClassName
+> Task :bootJar
+
+BUILD SUCCESSFUL in 17s
+5 actionable tasks: 5 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ ./gradlew test --no-daemon
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+
+> Task :test
+
+StudentControllerTests > showsStudentNameOnRootPage() FAILED
+    java.lang.AssertionError at StudentControllerTests.java:101
+
+2026-10-29T10:21:33.793Z  INFO 2765 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T10:21:33.800Z  INFO 2765 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-29T10:21:33.803Z  INFO 2765 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-29T10:21:33.811Z  INFO 2765 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T10:21:33.813Z  INFO 2765 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-29T10:21:33.816Z  INFO 2765 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+> Task :test FAILED
+
+8 tests completed, 1 failed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':test'.
+> There were failing tests. See the report at: file:///var/jenkins_home/workspace/Akenzhan_Assanali_Student_API/build/reports/tests/test/index.html
+
+* Try:
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 33s
+5 actionable tasks: 3 executed, 2 up-to-date
+Post stage
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+Stage "Docker Build" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify)
+Stage "Verify" skipped due to earlier failure(s)
+[Pipeline] getContext
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Pipeline for Akenzhan Assanali FAILED - see the stage logs above
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+ERROR: script returned exit code 1
+Finished: FAILURE

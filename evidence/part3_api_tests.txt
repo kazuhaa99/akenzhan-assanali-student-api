@@ -1,0 +1,26 @@
+=== 1. Create a student (POST) ===
+{"firstName":"Assanali","lastName":"Akenzhan","email":"assanali.akenzhan.1793268144@iitu.edu.kz","course":"DevOps Mastery","id":5}
+HTTP 201
+
+=== 2. Get all students (GET) ===
+[{"firstName":"Assanali","lastName":"Akenzhan","email":"assanali.akenzhan.1793268144@iitu.edu.kz","course":"DevOps Mastery","id":5},{"firstName":"Temp","lastName":"Akenzhan-Test","email":"temp.1793268144@iitu.edu.kz","course":"Docker","id":6}]
+HTTP 200
+
+=== 3. Get student by id=5 (GET) ===
+{"firstName":"Assanali","lastName":"Akenzhan","email":"assanali.akenzhan.1793268144@iitu.edu.kz","course":"DevOps Mastery","id":5}
+HTTP 200
+
+=== 4. Update student id=5 (PUT) ===
+{"firstName":"Assanali","lastName":"Akenzhan","email":"a.akenzhan.1793268144@iitu.edu.kz","course":"Jenkins CI/CD","id":5}
+HTTP 200
+
+=== 5. Delete the temporary student id=6 (DELETE) ===
+HTTP 204
+
+=== 6. Request a nonexistent student (GET id=99999) ===
+{"error":"Not Found","status":404,"timestamp":"2026-10-29T10:02:26.086635293Z","message":"Student with id 99999 not found"}
+HTTP 404
+
+=== Final list ===
+[{"firstName":"Assanali","lastName":"Akenzhan","email":"a.akenzhan.1793268144@iitu.edu.kz","course":"Jenkins CI/CD","id":5}]
+HTTP 200

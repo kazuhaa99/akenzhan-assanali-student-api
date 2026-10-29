@@ -1,0 +1,70 @@
+++ git checkout -b feature/akenzhan-assanali-documentation
+Switched to a new branch 'feature/akenzhan-assanali-documentation'
+++ sed -i '3s/.*/Spring Boot CRUD REST API for managing IITU students, documented by Akenzhan Assanali./' README.md
+++ sed -n 3p README.md
+Spring Boot CRUD REST API for managing IITU students, documented by Akenzhan Assanali.
+++ git commit -q -am 'Improve README description on documentation branch (Akenzhan Assanali)'
+++ git checkout main
+Switched to branch 'main'
+++ sed -i '3s/.*/Student management service built with Spring Boot, PostgreSQL and Docker (DevOps midterm, Akenzhan Assanali)./' README.md
+++ sed -n 3p README.md
+Student management service built with Spring Boot, PostgreSQL and Docker (DevOps midterm, Akenzhan Assanali).
+++ git commit -q -am 'Update README description on main (Akenzhan Assanali)'
+++ git merge feature/akenzhan-assanali-documentation
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+++ git status
+On branch main
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+	both modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	evidence/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+++ cat README.md
+++ head -12
+# Akenzhan Assanali — Student API
+
+<<<<<<< HEAD
+Student management service built with Spring Boot, PostgreSQL and Docker (DevOps midterm, Akenzhan Assanali).
+=======
+Spring Boot CRUD REST API for managing IITU students, documented by Akenzhan Assanali.
+>>>>>>> feature/akenzhan-assanali-documentation
+
+- **Student:** Akenzhan Assanali
+- **Stack:** Java 17, Spring Boot, Gradle, PostgreSQL, Docker, Jenkins
+- **Image:** `akenzhan-assanali-student-api:v1.0-akenzhan-assanali`
+
+++ python -
+++ head -6 README.md
+# Akenzhan Assanali — Student API
+
+Spring Boot CRUD REST API for managing IITU students, built with PostgreSQL and Docker
+(DevOps midterm, Akenzhan Assanali).
+
+- **Student:** Akenzhan Assanali
+++ grep -c '<<<<<<<\|>>>>>>>' README.md
+0
+++ git add README.md
+++ git commit -q -m 'Resolve README merge conflict between main and documentation branch (Akenzhan Assanali)'
+++ git log --oneline --graph --all
+*   8cf36d9 Resolve README merge conflict between main and documentation branch (Akenzhan Assanali)
+|\  
+| * b4dacb8 Improve README description on documentation branch (Akenzhan Assanali)
+* | c3dcd9c Update README description on main (Akenzhan Assanali)
+|/  
+*   1c6469d Merge branch 'feature/akenzhan-assanali-crud' into main
+|\  
+| * c136f5b Document update endpoint in README (Akenzhan Assanali)
+| * 073b205 Add update (PUT) endpoint for students by Akenzhan Assanali
+|/  
+* 5c875f2 Initial commit: Akenzhan Assanali Student API
++ pwd -P

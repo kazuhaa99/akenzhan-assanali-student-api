@@ -68,3 +68,29 @@ credentials let attackers access the database and other systems. Secrets are kep
 - **Continuous Deployment** — every change that passes the pipeline is automatically released to
   production without manual approval. (Continuous *Delivery* also prepares a release
   automatically, but deployment is started manually.) This project implements CI only.
+
+## Jenkins CI (job `Akenzhan_Assanali_Student_API`)
+
+Local Jenkins runs in Docker (`jenkins/`): JDK 17 tool `jdk-17`, Gradle wrapper, Docker CLI
+connected to the host Docker engine, job and credentials created with Configuration as Code.
+The admin password and the DB password are read from `jenkins/.env` (not committed); the DB
+password is stored in Jenkins Credentials as `akenzhan-assanali-db-password`.
+
+```bash
+cd jenkins && cp .env.example .env && docker compose up -d --build   # http://localhost:8081
+```
+
+Pipeline stages: **Checkout → Build → Test → Docker Build → Verify**. A failing build or test
+stops the pipeline, the later stages are skipped.
+
+### Controlled failure (branch `test/akenzhan-assanali-pipeline-failure`)
+1. Build #4 — the test `showsStudentNameOnRootPage` was changed to expect `"Assanali Akenzhan"`
+   while the application returns `"Akenzhan Assanali"`. Gradle reported
+   `8 tests completed, 1 failed`, the **Test** stage failed and **Docker Build** / **Verify**
+   were skipped.
+2. The expectation was restored in the next commit; build #5 passed all stages.
+
+### Automation
+The job polls GitHub (`pollSCM('H/2 * * * *')`); a new commit on `main` starts the pipeline
+automatically ("Started by an SCM change"). A GitHub webhook is not used because this Jenkins
+runs on `localhost` and is not reachable from GitHub.

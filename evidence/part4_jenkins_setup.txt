@@ -1,0 +1,273 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 620B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 552B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/jenkins/jenkins:lts-jdk17
+#3 ...
+
+#4 [internal] load metadata for docker.io/library/docker:cli
+#4 DONE 2.8s
+
+#3 [internal] load metadata for docker.io/jenkins/jenkins:lts-jdk17
+#3 DONE 2.8s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 1.55kB done
+#6 DONE 0.1s
+
+#7 FROM docker.io/library/docker:cli@sha256:5e6baf67325a79f64ed3bed6863954d5e05d0f3d4e57cbdb14809346814bbfdb
+#7 resolve docker.io/library/docker:cli@sha256:5e6baf67325a79f64ed3bed6863954d5e05d0f3d4e57cbdb14809346814bbfdb 0.0s done
+#7 DONE 0.5s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 resolve docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d 0.1s done
+#8 DONE 0.7s
+
+#7 FROM docker.io/library/docker:cli@sha256:5e6baf67325a79f64ed3bed6863954d5e05d0f3d4e57cbdb14809346814bbfdb
+#7 sha256:bd4566122f6780524803d9c99f3972356f9f4376af28b34ed139882644e0bd52 0B / 116B 0.3s
+#7 sha256:ee498a1860a58ca22c70842c8452e40a4a17054dca5632cf144c188f39bf42cf 0B / 1.01kB 0.2s
+#7 sha256:8b815a471d8d9c1447a7b722f089fb5637da5551fac7f77ff6d77fade03f9c68 0B / 540B 0.2s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 0B / 11.31MB 0.2s
+#7 sha256:bd4566122f6780524803d9c99f3972356f9f4376af28b34ed139882644e0bd52 116B / 116B 0.3s done
+#7 sha256:ee498a1860a58ca22c70842c8452e40a4a17054dca5632cf144c188f39bf42cf 1.01kB / 1.01kB 0.5s done
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 0B / 23.82MB 0.3s
+#7 sha256:8b815a471d8d9c1447a7b722f089fb5637da5551fac7f77ff6d77fade03f9c68 540B / 540B 0.7s done
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 0B / 20.29MB 0.2s
+#7 sha256:cffe68be57c630fbaa214ba63287e4d95925608af1f8135029c889faba1fd4f9 0B / 456B 0.2s
+#7 sha256:cffe68be57c630fbaa214ba63287e4d95925608af1f8135029c889faba1fd4f9 456B / 456B 0.4s done
+#7 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0B / 32B 0.2s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 1.05MB / 11.31MB 1.4s
+#7 sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 32B / 32B 0.3s done
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 2.10MB / 11.31MB 1.5s
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 0B / 8.20MB 0.2s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 3.15MB / 11.31MB 1.7s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 1.05MB / 20.29MB 1.2s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 2.10MB / 23.82MB 1.7s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 4.19MB / 11.31MB 2.0s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 2.10MB / 20.29MB 1.5s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 6.29MB / 11.31MB 2.1s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 3.15MB / 20.29MB 1.7s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 7.34MB / 11.31MB 2.5s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 4.19MB / 23.82MB 2.4s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 9.44MB / 11.31MB 2.7s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 4.19MB / 20.29MB 2.2s
+#7 sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 11.31MB / 11.31MB 3.0s done
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 6.29MB / 23.82MB 2.8s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 5.24MB / 20.29MB 2.6s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 6.29MB / 20.29MB 2.7s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 7.34MB / 20.29MB 2.8s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 8.39MB / 23.82MB 3.1s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 8.39MB / 20.29MB 3.0s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 9.44MB / 20.29MB 3.1s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 10.49MB / 23.82MB 3.6s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 10.49MB / 20.29MB 3.3s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 12.58MB / 23.82MB 3.9s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 11.53MB / 20.29MB 3.6s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 12.58MB / 20.29MB 3.7s
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 1.05MB / 8.20MB 2.8s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 14.68MB / 23.82MB 4.2s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 13.63MB / 20.29MB 3.9s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 14.68MB / 20.29MB 4.0s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 16.78MB / 23.82MB 4.5s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 15.73MB / 20.29MB 4.2s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 16.78MB / 20.29MB 4.3s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 17.83MB / 20.29MB 4.5s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 19.92MB / 23.82MB 5.4s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 18.87MB / 20.29MB 5.1s
+#7 sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 20.29MB / 20.29MB 5.2s done
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 22.02MB / 23.82MB 5.7s
+#7 sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 23.82MB / 23.82MB 5.8s done
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 2.10MB / 8.20MB 4.6s
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 3.15MB / 8.20MB 6.1s
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 4.19MB / 8.20MB 7.5s
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 5.24MB / 8.20MB 8.2s
+#7 ...
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 sha256:0b9e958129f491a791906f3489da0ef6d73fe8ecd6ab244ea86efb9457c2d54c 390B / 390B 0.3s done
+#8 sha256:76eac8d3a597602036983ad5cada2c3613afad9dc2fa490e84a947a144c403f6 1.29kB / 1.29kB 0.3s done
+#8 sha256:46f93bf1cb2f067a8ec6d24c4b031184bd91f301ead522c1b3f794bfdd80695d 2.23kB / 2.23kB 0.3s done
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 10.49MB / 96.12MB 6.0s
+#8 sha256:503dee4523cf2a85871da0a64cab0e94ce91aa6793ece0cda497c41881870f2d 29.36MB / 63.45MB 4.4s
+#8 sha256:b7b154fd69a136b640d89d7c156048a48fe4124b7638ed13107df72b132fabb3 3.15MB / 6.29MB 4.1s
+#8 ...
+
+#7 FROM docker.io/library/docker:cli@sha256:5e6baf67325a79f64ed3bed6863954d5e05d0f3d4e57cbdb14809346814bbfdb
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 6.29MB / 8.20MB 9.3s
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 7.34MB / 8.20MB 10.0s
+#7 sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 8.20MB / 8.20MB 10.8s done
+#7 extracting sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655
+#7 extracting sha256:a71b0c095ee8f31ff0a9447309e85f808367b1122c75e0356ff231a722d87655 0.8s done
+#7 extracting sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1 0.1s done
+#7 DONE 13.6s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 19.92MB / 96.12MB 9.0s
+#8 sha256:503dee4523cf2a85871da0a64cab0e94ce91aa6793ece0cda497c41881870f2d 57.67MB / 63.45MB 7.4s
+#8 sha256:b7b154fd69a136b640d89d7c156048a48fe4124b7638ed13107df72b132fabb3 6.29MB / 6.29MB 6.1s done
+#8 sha256:01938f7c040b559dfd1d16346f9bbd40a305e214e2e16728dcf3ac75845c020f 187B / 187B 0.3s done
+#8 sha256:6327a7366a6fa4c5c57a9a04274db866841098e717655c7e56d4f67e3cc915a0 184B / 184B 0.5s done
+#8 sha256:6da7907f70f4c563d02439f2a3a5b3f951e74cfa0ac6633e39e945ec0f10b2ef 0B / 1.23kB 0.5s
+#8 sha256:69503609dc016576a481fcb3d3a9113b0a266becbab919ba239c3a929a9a39ac 0B / 5.24MB 0.2s
+#8 sha256:6da7907f70f4c563d02439f2a3a5b3f951e74cfa0ac6633e39e945ec0f10b2ef 1.23kB / 1.23kB 0.5s done
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 0B / 59.45MB 0.2s
+#8 sha256:503dee4523cf2a85871da0a64cab0e94ce91aa6793ece0cda497c41881870f2d 62.91MB / 63.45MB 8.3s
+#8 sha256:503dee4523cf2a85871da0a64cab0e94ce91aa6793ece0cda497c41881870f2d 63.45MB / 63.45MB 8.4s done
+#8 sha256:69503609dc016576a481fcb3d3a9113b0a266becbab919ba239c3a929a9a39ac 1.05MB / 5.24MB 1.4s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 0B / 49.29MB 0.2s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 4.19MB / 59.45MB 1.4s
+#8 ...
+
+#7 FROM docker.io/library/docker:cli@sha256:5e6baf67325a79f64ed3bed6863954d5e05d0f3d4e57cbdb14809346814bbfdb
+#7 extracting sha256:cffe68be57c630fbaa214ba63287e4d95925608af1f8135029c889faba1fd4f9 0.1s done
+#7 extracting sha256:335f14bb4f7daee1feb8e7e8cfe9df0f5a40f77513d6d250f91b1c2e14ad495f 0.5s done
+#7 extracting sha256:552fcdedd26330070ccaa40f0323894f649d8243ac86ced87ccbb5740be54c88 0.9s done
+#7 extracting sha256:d07dfa8df4d19a6df163cb82622dcd15c33380a9453936fed2450ebbd1234d06 0.4s done
+#7 DONE 15.4s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 ...
+
+#7 FROM docker.io/library/docker:cli@sha256:5e6baf67325a79f64ed3bed6863954d5e05d0f3d4e57cbdb14809346814bbfdb
+#7 extracting sha256:8b815a471d8d9c1447a7b722f089fb5637da5551fac7f77ff6d77fade03f9c68 0.1s done
+#7 extracting sha256:ee498a1860a58ca22c70842c8452e40a4a17054dca5632cf144c188f39bf42cf 0.1s done
+#7 DONE 15.5s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 ...
+
+#7 FROM docker.io/library/docker:cli@sha256:5e6baf67325a79f64ed3bed6863954d5e05d0f3d4e57cbdb14809346814bbfdb
+#7 extracting sha256:bd4566122f6780524803d9c99f3972356f9f4376af28b34ed139882644e0bd52 0.1s done
+#7 DONE 15.6s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 7.34MB / 59.45MB 2.1s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 25.17MB / 96.12MB 11.3s
+#8 sha256:69503609dc016576a481fcb3d3a9113b0a266becbab919ba239c3a929a9a39ac 2.10MB / 5.24MB 2.6s
+#8 sha256:69503609dc016576a481fcb3d3a9113b0a266becbab919ba239c3a929a9a39ac 3.15MB / 5.24MB 3.0s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 10.49MB / 59.45MB 2.9s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 14.68MB / 59.45MB 3.2s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 30.41MB / 96.12MB 12.6s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 17.83MB / 59.45MB 3.6s
+#8 sha256:69503609dc016576a481fcb3d3a9113b0a266becbab919ba239c3a929a9a39ac 4.19MB / 5.24MB 4.1s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 20.97MB / 59.45MB 4.5s
+#8 sha256:69503609dc016576a481fcb3d3a9113b0a266becbab919ba239c3a929a9a39ac 5.24MB / 5.24MB 5.0s done
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 24.12MB / 59.45MB 5.0s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 28.31MB / 59.45MB 5.3s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 35.65MB / 96.12MB 14.6s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 32.51MB / 59.45MB 5.7s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 35.65MB / 59.45MB 6.3s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 1.05MB / 49.29MB 5.3s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 38.80MB / 59.45MB 6.8s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 40.89MB / 96.12MB 15.9s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 41.94MB / 59.45MB 7.1s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 45.09MB / 59.45MB 7.4s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 48.23MB / 59.45MB 7.8s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 46.14MB / 96.12MB 17.3s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 53.48MB / 59.45MB 8.7s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 56.62MB / 59.45MB 9.2s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 52.43MB / 96.12MB 18.6s
+#8 sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 59.45MB / 59.45MB 9.5s done
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 4.19MB / 49.29MB 9.0s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 57.67MB / 96.12MB 19.4s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 63.96MB / 96.12MB 20.1s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 70.25MB / 96.12MB 20.7s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 75.50MB / 96.12MB 21.2s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 80.74MB / 96.12MB 21.6s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 7.34MB / 49.29MB 11.7s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 85.98MB / 96.12MB 21.9s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 92.27MB / 96.12MB 22.4s
+#8 sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 96.12MB / 96.12MB 22.6s done
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 10.49MB / 49.29MB 13.2s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 13.63MB / 49.29MB 14.3s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 16.78MB / 49.29MB 15.0s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 19.92MB / 49.29MB 15.8s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 23.07MB / 49.29MB 16.4s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 26.21MB / 49.29MB 16.8s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 29.36MB / 49.29MB 17.3s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 33.55MB / 49.29MB 17.7s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 36.70MB / 49.29MB 18.0s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 40.89MB / 49.29MB 18.4s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 44.04MB / 49.29MB 18.8s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 47.19MB / 49.29MB 19.1s
+#8 sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 49.29MB / 49.29MB 19.2s done
+#8 extracting sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392
+#8 extracting sha256:53c88f1dfeb79b2f207f7f1a03a45e0dc5ed208b9f496de16b98f81189dc0392 2.7s done
+#8 DONE 36.5s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 extracting sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7
+#8 extracting sha256:4d2125ccf71c16701fc6961afb46ecd20e7a612e4f9225c668f8fbbf407daef7 3.1s done
+#8 DONE 39.6s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 extracting sha256:69503609dc016576a481fcb3d3a9113b0a266becbab919ba239c3a929a9a39ac 0.1s done
+#8 extracting sha256:6da7907f70f4c563d02439f2a3a5b3f951e74cfa0ac6633e39e945ec0f10b2ef 0.0s done
+#8 DONE 39.7s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 extracting sha256:6327a7366a6fa4c5c57a9a04274db866841098e717655c7e56d4f67e3cc915a0 0.0s done
+#8 extracting sha256:01938f7c040b559dfd1d16346f9bbd40a305e214e2e16728dcf3ac75845c020f 0.0s done
+#8 extracting sha256:b7b154fd69a136b640d89d7c156048a48fe4124b7638ed13107df72b132fabb3 0.1s done
+#8 DONE 39.8s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 extracting sha256:503dee4523cf2a85871da0a64cab0e94ce91aa6793ece0cda497c41881870f2d
+#8 extracting sha256:503dee4523cf2a85871da0a64cab0e94ce91aa6793ece0cda497c41881870f2d 0.7s done
+#8 DONE 40.5s
+
+#8 [stage-0 1/4] FROM docker.io/jenkins/jenkins:lts-jdk17@sha256:cce1eeb79902722f3cf7a8831c41e95c39f4a42b9a2981959630cc66539b3c2d
+#8 extracting sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f
+#8 extracting sha256:f44eb945cec15a8e99f05c57ab9eb0409727b58a87a5034ac8bb3b68eb1e8a5f 0.6s done
+#8 extracting sha256:46f93bf1cb2f067a8ec6d24c4b031184bd91f301ead522c1b3f794bfdd80695d
+#8 extracting sha256:46f93bf1cb2f067a8ec6d24c4b031184bd91f301ead522c1b3f794bfdd80695d 0.0s done
+#8 extracting sha256:76eac8d3a597602036983ad5cada2c3613afad9dc2fa490e84a947a144c403f6 0.0s done
+#8 extracting sha256:0b9e958129f491a791906f3489da0ef6d73fe8ecd6ab244ea86efb9457c2d54c 0.0s done
+#8 DONE 41.2s
+
+#9 [stage-0 2/4] COPY --from=docker:cli /usr/local/bin/docker /usr/local/bin/docker
+#9 DONE 1.3s
+
+#10 [stage-0 3/4] RUN jenkins-plugin-cli --plugins     workflow-aggregator git junit credentials credentials-binding     configuration-as-code job-dsl
+#10 8.982 
+#10 8.982 Security warnings:
+#10 8.983 workflow-multibranch (841.vec5b_9e1806ec): SECURITY-3729 Exposure of System-scoped credentials https://www.jenkins.io/security/advisory/2026-09-16/#SECURITY-3729
+#10 8.983 pipeline-groovy-lib (798.v5cc688825312): SECURITY-3815 CSRF vulnerability https://www.jenkins.io/security/advisory/2026-09-02/#SECURITY-3815
+#10 8.983 pipeline-groovy-lib (798.v5cc688825312): SECURITY-3796 Path traversal vulnerability https://www.jenkins.io/security/advisory/2026-09-16/#SECURITY-3796
+#10 25.47 Done
+#10 DONE 25.8s
+
+#11 [stage-0 4/4] COPY casc.yaml /usr/share/jenkins/ref/casc.yaml
+#11 DONE 0.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 3.2s done
+#12 exporting manifest sha256:e78585dfe7994d42e2ce87324bf47e9654e3258412025f1362e9eb9be3a12ab3 0.0s done
+#12 exporting config sha256:e5f980ef741a6650b8edc4cbf2c7ff23e6f8aed7e4b472c58da23789b1124244 0.0s done
+#12 exporting attestation manifest sha256:3e996327b21feab6ac86ea6ebb73eb8580568f640dbf129c50fddd0a73a1cd79 0.0s done
+#12 exporting manifest list sha256:9f9f9964674344bb89e979d489627b84300e7c56832ce9dd5415badd065e7413 0.0s done
+#12 naming to docker.io/library/akenzhan-assanali-jenkins:lts done
+#12 unpacking to docker.io/library/akenzhan-assanali-jenkins:lts
+#12 unpacking to docker.io/library/akenzhan-assanali-jenkins:lts 0.7s done
+#12 DONE 4.0s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ akenzhan-assanali-jenkins:lts  Built
+ Network akenzhan-assanali-jenkins_default  Creating
+ Network akenzhan-assanali-jenkins_default  Created
+ Volume akenzhan-assanali-jenkins_akenzhan_assanali_jenkins_home  Creating
+ Volume akenzhan-assanali-jenkins_akenzhan_assanali_jenkins_home  Created
+ Container akenzhan-assanali-jenkins  Creating
+ Container akenzhan-assanali-jenkins  Created
+ Container akenzhan-assanali-jenkins  Starting
+ Container akenzhan-assanali-jenkins  Started

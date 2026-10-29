@@ -1,0 +1,194 @@
+++ docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'
+NAMES                           IMAGE                                                  STATUS                        PORTS
+akenzhan-assanali-student-api   akenzhan-assanali-student-api:v1.0-akenzhan-assanali   Up About a minute             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+akenzhan-assanali-postgres      postgres:16-alpine                                     Up About a minute (healthy)   5432/tcp
+tabs-frontend-1                 tabs-frontend                                          Up 14 minutes                 0.0.0.0:5173->80/tcp, [::]:5173->80/tcp
+tabs-backend-1                  tabs-backend                                           Up 14 minutes (healthy)       8000/tcp
+++ docker logs --tail 15 akenzhan-assanali-student-api
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-29T10:01:12.580Z  INFO 1 --- [akenzhan-assanali-student-api] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-29T10:01:12.682Z  WARN 1 --- [akenzhan-assanali-student-api] [           main] org.hibernate.orm.jdbc.warn              : HHH000247: ErrorCode: 0, SQLState: 00000
+2026-10-29T10:01:12.682Z  WARN 1 --- [akenzhan-assanali-student-api] [           main] org.hibernate.orm.jdbc.warn              : constraint "uke2rndfrsx22acpq2ty1caeuyw" of relation "students" does not exist, skipping
+2026-10-29T10:01:12.695Z  INFO 1 --- [akenzhan-assanali-student-api] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T10:01:12.834Z  INFO 1 --- [akenzhan-assanali-student-api] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-29T10:01:14.596Z  INFO 1 --- [akenzhan-assanali-student-api] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-10-29T10:01:14.786Z  INFO 1 --- [akenzhan-assanali-student-api] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-29T10:01:14.802Z  INFO 1 --- [akenzhan-assanali-student-api] [           main] k.a.studentapi.StudentApiApplication     : Started StudentApiApplication in 12.102 seconds (process running for 13.582)
+2026-10-29T10:01:34.035Z  INFO 1 --- [akenzhan-assanali-student-api] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-29T10:01:34.036Z  INFO 1 --- [akenzhan-assanali-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-29T10:01:34.038Z  INFO 1 --- [akenzhan-assanali-student-api] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+++ docker inspect akenzhan-assanali-student-api --format 'Name={{.Name}} Image={{.Config.Image}} Status={{.State.Status}} RestartCount={{.RestartCount}}'
+Name=/akenzhan-assanali-student-api Image=akenzhan-assanali-student-api:v1.0-akenzhan-assanali Status=running RestartCount=0
+++ docker inspect akenzhan-assanali-student-api --format '{{json .NetworkSettings.Networks}}'
+{"akenzhan-assanali-student-api_akenzhan-assanali-net":{"IPAMConfig":null,"Links":null,"Aliases":["akenzhan-assanali-student-api","app"],"MacAddress":"3e:ae:46:a9:01:bc","DriverOpts":null,"GwPriority":0,"NetworkID":"07559a1cac26bd22c875398032c74f92d1efec69da87f075165ff34bdacbf99e","EndpointID":"19f17bd75ca31db014a6d48b7aa9ca0ef3bebc58bbe36d9055fa9de4ff6ad108","Gateway":"172.23.0.1","IPAddress":"172.23.0.3","IPPrefixLen":16,"IPv6Gateway":"","GlobalIPv6Address":"","GlobalIPv6PrefixLen":0,"DNSNames":["akenzhan-assanali-student-api","app","3094fc255577"]}}
+++ docker inspect akenzhan-assanali-student-api --format '{{range .Config.Env}}{{println .}}{{end}}'
+++ grep -v PASSWORD
+SPRING_DATASOURCE_USERNAME=akenzhan
+SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/akenzhan_students
+PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+JAVA_HOME=/opt/java/openjdk
+LANG=en_US.UTF-8
+LANGUAGE=en_US:en
+LC_ALL=en_US.UTF-8
+JAVA_VERSION=jdk-17.0.20.1+1
+APP_VERSION=v1.0-akenzhan-assanali
+
+++ docker exec akenzhan-assanali-student-api sh -c 'whoami; java -version 2>&1 | head -1; ls -l /app; getent hosts postgres'
+root
+openjdk version "17.0.20.1" 2026-08-18
+total 53836
+-rw-r--r-- 1 root root 55125785 Oct 29 10:00 app.jar
+172.23.0.2      postgres
+++ docker compose stop app
+ Container akenzhan-assanali-student-api  Stopping
+ Container akenzhan-assanali-student-api  Stopped
+++ docker compose ps -a
+NAME                            IMAGE                                                  COMMAND                  SERVICE    CREATED              STATUS                        PORTS
+akenzhan-assanali-postgres      postgres:16-alpine                                     "docker-entrypoint.s…"   postgres   About a minute ago   Up About a minute (healthy)   5432/tcp
+akenzhan-assanali-student-api   akenzhan-assanali-student-api:v1.0-akenzhan-assanali   "java -jar /app/app.…"   app        About a minute ago   Exited (143) 1 second ago     
+++ docker compose start app
+ Container akenzhan-assanali-postgres  Waiting
+ Container akenzhan-assanali-postgres  Healthy
+ Container akenzhan-assanali-student-api  Starting
+ Container akenzhan-assanali-student-api  Started
+++ sleep 15
+++ docker compose ps
+NAME                            IMAGE                                                  COMMAND                  SERVICE    CREATED         STATUS                   PORTS
+akenzhan-assanali-postgres      postgres:16-alpine                                     "docker-entrypoint.s…"   postgres   2 minutes ago   Up 2 minutes (healthy)   5432/tcp
+akenzhan-assanali-student-api   akenzhan-assanali-student-api:v1.0-akenzhan-assanali   "java -jar /app/app.…"   app        2 minutes ago   Up 16 seconds            0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+++ curl -s http://localhost:8080/
+{"student":"Akenzhan Assanali","version":"v1.0-akenzhan-assanali","application":"Akenzhan Assanali Student API"}++ echo
+
+++ APP_TAG=v1.1-akenzhan-assanali
+++ docker compose up -d --build app
+#1 [internal] load local bake definitions
+#1 reading from stdin 690B 0.1s done
+#1 DONE 0.1s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 763B 0.0s done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:17-jdk
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#4 DONE 1.3s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 86B 0.0s done
+#5 DONE 0.0s
+
+#6 [stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee
+#6 resolve docker.io/library/eclipse-temurin:17-jre@sha256:4faa9eaf440514dd4f7ef71fecb92526e13679aea039bed5d2fc98e885c60dee 0.0s done
+#6 DONE 0.1s
+
+#7 [build 1/7] FROM docker.io/library/eclipse-temurin:17-jdk@sha256:91011320978c10ec51d2cde1eb6f616db6d2a739a0e521096c343dd3fed9abe6
+#7 resolve docker.io/library/eclipse-temurin:17-jdk@sha256:91011320978c10ec51d2cde1eb6f616db6d2a739a0e521096c343dd3fed9abe6 0.0s done
+#7 DONE 0.1s
+
+#8 [internal] load build context
+#8 transferring context: 1.81kB 0.0s done
+#8 DONE 0.0s
+
+#9 [build 4/7] COPY gradle ./gradle
+#9 CACHED
+
+#10 [build 2/7] WORKDIR /workspace
+#10 CACHED
+
+#11 [build 5/7] RUN chmod +x gradlew && ./gradlew dependencies --no-daemon > /dev/null
+#11 CACHED
+
+#12 [build 7/7] RUN ./gradlew bootJar -x test --no-daemon
+#12 CACHED
+
+#13 [stage-1 2/3] WORKDIR /app
+#13 CACHED
+
+#14 [build 3/7] COPY gradlew settings.gradle build.gradle ./
+#14 CACHED
+
+#15 [build 6/7] COPY src ./src
+#15 CACHED
+
+#16 [stage-1 3/3] COPY --from=build /workspace/build/libs/student-api.jar app.jar
+#16 CACHED
+
+#17 exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:d2f10cda4f9bfb8f1bfcc967202d73cfe428ebb770db358435bea50efab2f811 0.0s done
+#17 exporting config sha256:a22a7438c0a3970acea11fd49514b2f4363338547ef9d47ca70e91c7ab68eb62
+#17 exporting config sha256:a22a7438c0a3970acea11fd49514b2f4363338547ef9d47ca70e91c7ab68eb62 0.0s done
+#17 exporting attestation manifest sha256:152ef7c74f20ae6037805e69e67ed3c6917f5c2ed98f4db21cbf24208e6900bf 0.0s done
+#17 exporting manifest list sha256:7bc547670132022ef78c2157f47e080c4d940dcfbb72699179706877f4e86770 0.0s done
+#17 naming to docker.io/library/akenzhan-assanali-student-api:v1.1-akenzhan-assanali
+#17 naming to docker.io/library/akenzhan-assanali-student-api:v1.1-akenzhan-assanali done
+#17 unpacking to docker.io/library/akenzhan-assanali-student-api:v1.1-akenzhan-assanali 0.0s done
+#17 DONE 0.2s
+
+#18 resolving provenance for metadata file
+#18 DONE 0.0s
+ akenzhan-assanali-student-api:v1.1-akenzhan-assanali  Built
+ Container akenzhan-assanali-postgres  Running
+ Container akenzhan-assanali-student-api  Recreate
+ Container akenzhan-assanali-student-api  Recreated
+ Container akenzhan-assanali-postgres  Waiting
+ Container akenzhan-assanali-postgres  Healthy
+ Container akenzhan-assanali-student-api  Starting
+ Container akenzhan-assanali-student-api  Started
+++ sleep 18
+++ docker images akenzhan-assanali-student-api
+REPOSITORY                      TAG                      IMAGE ID       CREATED         SIZE
+akenzhan-assanali-student-api   v1.0-akenzhan-assanali   5ceded5aa24e   3 minutes ago   532MB
+akenzhan-assanali-student-api   v1.1-akenzhan-assanali   7bc547670132   3 minutes ago   532MB
+++ curl -s http://localhost:8080/
+{"application":"Akenzhan Assanali Student API","version":"v1.1-akenzhan-assanali","student":"Akenzhan Assanali"}++ echo
+
+++ curl -s http://localhost:8080/api/students
+[{"firstName":"Assanali","lastName":"Akenzhan","email":"a.akenzhan.1793268144@iitu.edu.kz","course":"Jenkins CI/CD","id":5}]++ echo
+
+++ docker compose down
+ Container akenzhan-assanali-student-api  Stopping
+ Container akenzhan-assanali-student-api  Stopped
+ Container akenzhan-assanali-student-api  Removing
+ Container akenzhan-assanali-student-api  Removed
+ Container akenzhan-assanali-postgres  Stopping
+ Container akenzhan-assanali-postgres  Stopped
+ Container akenzhan-assanali-postgres  Removing
+ Container akenzhan-assanali-postgres  Removed
+ Network akenzhan-assanali-student-api_akenzhan-assanali-net  Removing
+ Network akenzhan-assanali-student-api_akenzhan-assanali-net  Removed
+++ docker volume ls --filter name=akenzhan
+DRIVER    VOLUME NAME
+local     akenzhan-assanali-student-api_akenzhan_assanali_pgdata
+++ docker compose up -d
+ Network akenzhan-assanali-student-api_akenzhan-assanali-net  Creating
+ Network akenzhan-assanali-student-api_akenzhan-assanali-net  Created
+ Container akenzhan-assanali-postgres  Creating
+ Container akenzhan-assanali-postgres  Created
+ Container akenzhan-assanali-student-api  Creating
+ Container akenzhan-assanali-student-api  Created
+ Container akenzhan-assanali-postgres  Starting
+ Container akenzhan-assanali-postgres  Started
+ Container akenzhan-assanali-postgres  Waiting
+ Container akenzhan-assanali-postgres  Healthy
+ Container akenzhan-assanali-student-api  Starting
+ Container akenzhan-assanali-student-api  Started
+++ sleep 22
+++ docker compose ps
+NAME                            IMAGE                                                  COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+akenzhan-assanali-postgres      postgres:16-alpine                                     "docker-entrypoint.s…"   postgres   30 seconds ago   Up 29 seconds (healthy)   5432/tcp
+akenzhan-assanali-student-api   akenzhan-assanali-student-api:v1.0-akenzhan-assanali   "java -jar /app/app.…"   app        30 seconds ago   Up 23 seconds             0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+++ curl -s http://localhost:8080/api/students
+[{"firstName":"Assanali","lastName":"Akenzhan","email":"a.akenzhan.1793268144@iitu.edu.kz","course":"Jenkins CI/CD","id":5}]++ echo
+
+++ docker exec akenzhan-assanali-postgres psql -U akenzhan -d akenzhan_students -c 'SELECT id, first_name, last_name, course FROM students;'
+ id | first_name | last_name |    course     
+----+------------+-----------+---------------
+  5 | Assanali   | Akenzhan  | Jenkins CI/CD
+(1 row)
+

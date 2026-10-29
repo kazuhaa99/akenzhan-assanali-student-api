@@ -1,0 +1,45 @@
+++ git remote add origin https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+++ git remote -v
+origin	https://github.com/kazuhaa99/akenzhan-assanali-student-api.git (fetch)
+origin	https://github.com/kazuhaa99/akenzhan-assanali-student-api.git (push)
+++ git tag -a v1.0-akenzhan-assanali -m 'Version 1.0 of Akenzhan Assanali Student API'
+++ git push -u origin main
+branch 'main' set up to track 'origin/main'.
+To https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ * [new branch]      main -> main
+++ git push origin feature/akenzhan-assanali-crud feature/akenzhan-assanali-documentation
+To https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ * [new branch]      feature/akenzhan-assanali-crud -> feature/akenzhan-assanali-crud
+ * [new branch]      feature/akenzhan-assanali-documentation -> feature/akenzhan-assanali-documentation
+++ git push origin v1.0-akenzhan-assanali
+To https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ * [new tag]         v1.0-akenzhan-assanali -> v1.0-akenzhan-assanali
+++ git branch -a
+  feature/akenzhan-assanali-crud
+  feature/akenzhan-assanali-documentation
+* main
+  remotes/origin/feature/akenzhan-assanali-crud
+  remotes/origin/feature/akenzhan-assanali-documentation
+  remotes/origin/main
+++ git tag -n
+v1.0-akenzhan-assanali Version 1.0 of Akenzhan Assanali Student API
+++ git log --oneline --graph --all --decorate
+* 1f4ff98 (HEAD -> main, tag: v1.0-akenzhan-assanali, origin/main) Add curl API test script and project explanations (Akenzhan Assanali)
+*   8cf36d9 Resolve README merge conflict between main and documentation branch (Akenzhan Assanali)
+|\  
+| * b4dacb8 (origin/feature/akenzhan-assanali-documentation, feature/akenzhan-assanali-documentation) Improve README description on documentation branch (Akenzhan Assanali)
+* | c3dcd9c Update README description on main (Akenzhan Assanali)
+|/  
+*   1c6469d Merge branch 'feature/akenzhan-assanali-crud' into main
+|\  
+| * c136f5b (origin/feature/akenzhan-assanali-crud, feature/akenzhan-assanali-crud) Document update endpoint in README (Akenzhan Assanali)
+| * 073b205 Add update (PUT) endpoint for students by Akenzhan Assanali
+|/  
+* 5c875f2 Initial commit: Akenzhan Assanali Student API
+++ git ls-remote origin
+1f4ff98630dc12134fd32668cf87e6811fddeefc	HEAD
+c136f5be735a348631745de031679ede39f43442	refs/heads/feature/akenzhan-assanali-crud
+b4dacb8766f1754af2dfbabee64b045806af64f9	refs/heads/feature/akenzhan-assanali-documentation
+1f4ff98630dc12134fd32668cf87e6811fddeefc	refs/heads/main
+0e69666b521636f52644cd3ad3f2ecda620456a8	refs/tags/v1.0-akenzhan-assanali
+1f4ff98630dc12134fd32668cf87e6811fddeefc	refs/tags/v1.0-akenzhan-assanali^{}
