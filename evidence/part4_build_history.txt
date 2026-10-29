@@ -1,0 +1,13 @@
+Jenkins build history (Akenzhan_Assanali_Student_API)
+#1  FAILURE  — Started by an SCM change
+#2  FAILURE  — Started by user Akenzhan Assanali
+#3  SUCCESS  — Started by user Akenzhan Assanali
+#4  FAILURE  — Started by user Akenzhan Assanali
+#5  SUCCESS  — Started by user Akenzhan Assanali
+#6  SUCCESS  — Started by user Akenzhan Assanali
+#7  SUCCESS  — Started by user Akenzhan Assanali
+#8  SUCCESS  — Started by an SCM change
+
+#1-#2: initial job misconfiguration (branch parameter not resolved), fixed in jenkins/casc.yaml
+#4: controlled test failure on test/akenzhan-assanali-pipeline-failure, #5: fixed
+#8: started automatically by SCM polling after a commit to main

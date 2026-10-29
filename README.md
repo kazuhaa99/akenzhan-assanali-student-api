@@ -90,6 +90,8 @@ stops the pipeline, the later stages are skipped.
    `8 tests completed, 1 failed`, the **Test** stage failed and **Docker Build** / **Verify**
    were skipped.
 2. The expectation was restored in the next commit; build #5 passed all stages.
+   (Builds #4 and #5 were started with a temporary `BRANCH` job parameter; the job is now pinned
+   to `main` so that SCM polling works.)
 
 ### Automation
 The job polls GitHub (`pollSCM('H/2 * * * *')`); a new commit on `main` starts the pipeline

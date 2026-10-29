@@ -1,0 +1,250 @@
+Started by an SCM change
+Checking out git https://github.com/kazuhaa99/akenzhan-assanali-student-api.git into /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API@script/fe3ff35cb3a9f3e56a99ccd3c55a7179b9dc681c45d11d7121fc6debe7ccb48c to read Jenkinsfile
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API@script/fe3ff35cb3a9f3e56a99ccd3c55a7179b9dc681c45d11d7121fc6debe7ccb48c/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kazuhaa99/akenzhan-assanali-student-api.git # timeout=10
+Fetching upstream changes from https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/kazuhaa99/akenzhan-assanali-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 6cccd5d142c80a6e73764cd1464cca021759cad4 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6cccd5d142c80a6e73764cd1464cca021759cad4 # timeout=10
+Commit message: "Pin Jenkins job to main branch so SCM polling detects new commits (Akenzhan Assanali)"
+ > git rev-list --no-walk b8c9cd9a054a834ec016605946b43795eb9bb24c # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kazuhaa99/akenzhan-assanali-student-api.git # timeout=10
+Fetching upstream changes from https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/kazuhaa99/akenzhan-assanali-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 6cccd5d142c80a6e73764cd1464cca021759cad4 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6cccd5d142c80a6e73764cd1464cca021759cad4 # timeout=10
+Commit message: "Pin Jenkins job to main branch so SCM polling detects new commits (Akenzhan Assanali)"
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+Student: Akenzhan Assanali
+[Pipeline] checkout
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/Akenzhan_Assanali_Student_API/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/kazuhaa99/akenzhan-assanali-student-api.git # timeout=10
+Fetching upstream changes from https://github.com/kazuhaa99/akenzhan-assanali-student-api.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.47.3'
+ > git fetch --tags --force --progress -- https://github.com/kazuhaa99/akenzhan-assanali-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 6cccd5d142c80a6e73764cd1464cca021759cad4 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 6cccd5d142c80a6e73764cd1464cca021759cad4 # timeout=10
+Commit message: "Pin Jenkins job to main branch so SCM polling detects new commits (Akenzhan Assanali)"
+[Pipeline] sh
++ git log --oneline -5
+6cccd5d Pin Jenkins job to main branch so SCM polling detects new commits (Akenzhan Assanali)
+b8c9cd9 Mention Jenkins job in README to trigger SCM polling (Akenzhan Assanali)
+cea7ed2 Add Jenkins documentation and midterm evidence (Akenzhan Assanali)
+cc666db Add local Jenkins setup and JDK tool to Jenkinsfile (Akenzhan Assanali)
+1f4ff98 Add curl API test script and project explanations (Akenzhan Assanali)
+[Pipeline] sh
++ java -version
+openjdk version "17.0.18" 2026-01-20
+OpenJDK Runtime Environment Temurin-17.0.18+8 (build 17.0.18+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.18+8 (build 17.0.18+8, mixed mode)
++ docker version --format Docker client {{.Client.Version}}, server {{.Server.Version}}
+Docker client 29.9.2, server 28.5.1
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ chmod +x gradlew
+[Pipeline] sh
++ ./gradlew clean bootJar -x test --no-daemon
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :compileJava
+> Task :processResources
+> Task :classes
+> Task :resolveMainClassName
+> Task :bootJar
+
+BUILD SUCCESSFUL in 14s
+5 actionable tasks: 5 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ ./gradlew test --no-daemon
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava
+> Task :processTestResources
+> Task :testClasses
+2026-10-29T10:49:59.663Z  INFO 2683 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T10:49:59.674Z  INFO 2683 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-29T10:49:59.682Z  INFO 2683 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-29T10:49:59.695Z  INFO 2683 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-29T10:49:59.698Z  INFO 2683 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-29T10:49:59.700Z  INFO 2683 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+> Task :test
+
+BUILD SUCCESSFUL in 27s
+5 actionable tasks: 3 executed, 2 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
+Post stage
+[Pipeline] junit
+Recording test results
+[Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ docker build -t akenzhan-assanali-student-api:v1.0-akenzhan-assanali .
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  124.9kB
+Step 1/15 : FROM eclipse-temurin:17-jdk AS build
+ ---> 91011320978c
+Step 2/15 : WORKDIR /workspace
+ ---> Using cache
+ ---> 18addce852cc
+Step 3/15 : COPY gradlew settings.gradle build.gradle ./
+ ---> Using cache
+ ---> 649e5b61b94e
+Step 4/15 : COPY gradle ./gradle
+ ---> Using cache
+ ---> 6abb1f013c04
+Step 5/15 : RUN chmod +x gradlew && ./gradlew dependencies --no-daemon > /dev/null
+ ---> Using cache
+ ---> ad0deaa6dd9b
+Step 6/15 : COPY src ./src
+ ---> Using cache
+ ---> 275d538ae6ca
+Step 7/15 : RUN ./gradlew bootJar -x test --no-daemon
+ ---> Using cache
+ ---> ce8e86f01cd0
+Step 8/15 : FROM eclipse-temurin:17-jre
+ ---> 4faa9eaf4405
+Step 9/15 : LABEL maintainer="Akenzhan Assanali"       org.opencontainers.image.title="akenzhan-assanali-student-api"
+ ---> Using cache
+ ---> 5737ae65bede
+Step 10/15 : ARG APP_VERSION=v1.0-akenzhan-assanali
+ ---> Using cache
+ ---> 2246b9008d53
+Step 11/15 : ENV APP_VERSION=${APP_VERSION}
+ ---> Using cache
+ ---> 73e1a3be4b90
+Step 12/15 : WORKDIR /app
+ ---> Using cache
+ ---> b85b0dc823bf
+Step 13/15 : COPY --from=build /workspace/build/libs/student-api.jar app.jar
+ ---> Using cache
+ ---> 8946c7ca69a1
+Step 14/15 : EXPOSE 8080
+ ---> Using cache
+ ---> 77631f8d9c11
+Step 15/15 : ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ ---> Using cache
+ ---> a3b6f7643504
+Successfully built a3b6f7643504
+Successfully tagged akenzhan-assanali-student-api:v1.0-akenzhan-assanali
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] sh
++ docker image inspect akenzhan-assanali-student-api:v1.0-akenzhan-assanali --format Image {{.RepoTags}} created {{.Created}} size {{.Size}} bytes
+Image [akenzhan-assanali-student-api:v1.0-akenzhan-assanali] created 2026-10-29T10:14:15.254767557Z size 159253076 bytes
+[Pipeline] sh
++ docker images akenzhan-assanali-student-api
+IMAGE                                                  ID             DISK USAGE   CONTENT SIZE   EXTRA
+akenzhan-assanali-student-api:v1.0-akenzhan-assanali   a3b6f7643504        532MB          159MB        
+akenzhan-assanali-student-api:v1.1-akenzhan-assanali   7bc547670132        532MB          159MB        
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Pipeline for Akenzhan Assanali finished successfully: akenzhan-assanali-student-api:v1.0-akenzhan-assanali
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
