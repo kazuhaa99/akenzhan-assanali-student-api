@@ -32,9 +32,6 @@ jobs:
   - script: >
       pipelineJob('Akenzhan_Assanali_Student_API') {
         description('CI pipeline for the Spring Boot Student API of Akenzhan Assanali')
-        parameters {
-          stringParam('BRANCH', 'main', 'Git branch to build')
-        }
         properties {
           pipelineTriggers {
             triggers {
@@ -47,7 +44,7 @@ jobs:
             scm {
               git {
                 remote { url('https://github.com/kazuhaa99/akenzhan-assanali-student-api.git') }
-                branch('*/${BRANCH}')
+                branch('*/main')
               }
             }
             scriptPath('Jenkinsfile')
