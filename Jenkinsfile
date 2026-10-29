@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        jdk 'jdk-17'
+    }
+
     environment {
         STUDENT_NAME = 'Akenzhan Assanali'
         IMAGE_NAME   = 'akenzhan-assanali-student-api'
@@ -17,6 +21,7 @@ pipeline {
                 echo "Student: ${STUDENT_NAME}"
                 checkout scm
                 sh 'git log --oneline -5'
+                sh 'java -version && docker version --format "Docker client {{.Client.Version}}, server {{.Server.Version}}"'
             }
         }
 

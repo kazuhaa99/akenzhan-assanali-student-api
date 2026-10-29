@@ -1,0 +1,17 @@
+name: akenzhan-assanali-jenkins
+
+services:
+  jenkins:
+    build: .
+    image: akenzhan-assanali-jenkins:lts
+    container_name: akenzhan-assanali-jenkins
+    user: root            # needed to use the host Docker socket from the pipeline
+    env_file: .env        # JENKINS_ADMIN_PASSWORD, POSTGRES_PASSWORD (not committed)
+    ports:
+      - "8081:8080"
+    volumes:
+      - akenzhan_assanali_jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  akenzhan_assanali_jenkins_home:
