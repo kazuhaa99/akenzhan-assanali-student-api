@@ -1,6 +1,7 @@
 # Akenzhan Assanali — Student API
 
-Student management service built with Spring Boot, PostgreSQL and Docker (DevOps midterm, Akenzhan Assanali).
+Spring Boot CRUD REST API for managing IITU students, built with PostgreSQL and Docker
+(DevOps midterm, Akenzhan Assanali).
 
 - **Student:** Akenzhan Assanali
 - **Stack:** Java 17, Spring Boot, Gradle, PostgreSQL, Docker, Jenkins
