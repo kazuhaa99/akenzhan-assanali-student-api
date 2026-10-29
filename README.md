@@ -1,6 +1,6 @@
 # Akenzhan Assanali — Student API
 
-Spring Boot CRUD application for managing students (DevOps midterm).
+Spring Boot CRUD REST API for managing IITU students, documented by Akenzhan Assanali.
 
 - **Student:** Akenzhan Assanali
 - **Stack:** Java 17, Spring Boot, Gradle, PostgreSQL, Docker, Jenkins
