@@ -1,6 +1,6 @@
 # Akenzhan Assanali — Student API
 
-Spring Boot CRUD application for managing students (DevOps midterm).
+Student management service built with Spring Boot, PostgreSQL and Docker (DevOps midterm, Akenzhan Assanali).
 
 - **Student:** Akenzhan Assanali
 - **Stack:** Java 17, Spring Boot, Gradle, PostgreSQL, Docker, Jenkins
