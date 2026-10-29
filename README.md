@@ -6,6 +6,7 @@ Spring Boot CRUD REST API for managing IITU students, built with PostgreSQL and 
 - **Student:** Akenzhan Assanali
 - **Stack:** Java 17, Spring Boot, Gradle, PostgreSQL, Docker, Jenkins
 - **Image:** `akenzhan-assanali-student-api:v1.0-akenzhan-assanali`
+- **CI:** Jenkins job `Akenzhan_Assanali_Student_API` (SCM polling every 2 minutes)
 
 ## API
 
